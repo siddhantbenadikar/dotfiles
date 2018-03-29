@@ -96,9 +96,9 @@ alias vimconfig="vim ~/.vimrc"
 . `brew --prefix`/etc/profile.d/z.sh
 
 # figlet banner
-figlet Hi, Siddhant
+figlet Hi, Siddhant | lolcat
 
 # fortune | cowsay
-if [ -x /usr/local/bin/cowsay -a -x /usr/local/bin/fortune ]; then
-    fortune | cowsay
+if [ -x /usr/local/bin/cowsay -a -x /usr/local/bin/fortune -a -x /usr/local/bin/lolcat ]; then
+    fortune | cowsay | lolcat
 fi
