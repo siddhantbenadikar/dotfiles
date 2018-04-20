@@ -91,7 +91,7 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh" 
 alias vimconfig="vim ~/.vimrc"
-
+alias gp=lazygit
 # Added z to zshrc
 . `brew --prefix`/etc/profile.d/z.sh
 
@@ -102,3 +102,9 @@ figlet Hi, Siddhant | lolcat
 if [ -x /usr/local/bin/cowsay -a -x /usr/local/bin/fortune -a -x /usr/local/bin/lolcat ]; then
     fortune | cowsay | lolcat
 fi
+# Custom functions
+function lazygit() {
+    git add . &&
+    git commit -a -m "$1"
+    git push
+}
