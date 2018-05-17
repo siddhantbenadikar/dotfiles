@@ -75,6 +75,7 @@ function! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfunc
 " }}}
-"
-
+"Re-map {{{
+inoremap jj  <ESC>
+" }}}
 " vim:foldmethod=marker:foldlevel=0
