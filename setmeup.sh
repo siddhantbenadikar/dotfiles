@@ -29,6 +29,8 @@ brew install cowsay
 brew install lolcat
 brew install figlet
 brew install fortune
+brew install z
+brew install trash
 
 #Setting up .vimrc and .zshrc
 tput setaf 2; echo 'Setting up .vimrc and .zshrc...'
@@ -41,13 +43,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting &
 wait
 
+source ~/.zshrc
+
 tput setaf 2; echo 'DONE!!!'
 tput setaf 1; echo 'You need to download and setup cobalt-2 manually to complete the setup process.'
-
-
-
-
-
-
-
 
