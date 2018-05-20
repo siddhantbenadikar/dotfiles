@@ -58,7 +58,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git extract npm)
+plugins=(git extract npm zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -105,6 +105,6 @@ fi
 # Custom functions
 function lazygit() {
     git add . &&
-    git commit -a -m "$1"
+    git commit -a -m "$1" &&
     git push
 }
