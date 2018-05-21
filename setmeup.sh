@@ -24,7 +24,7 @@ tput setaf 2; echo 'Installing oh-my-zsh...'
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 #Install figlet, cowsay, lolcat, fortune
-tput setaf 2; echo 'Installing figlet, cowsay, lolcat, fortune'
+tput setaf 2; echo 'Installing figlet, cowsay, lolcat, fortune, z, trash'
 brew install cowsay
 brew install lolcat
 brew install figlet
