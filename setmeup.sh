@@ -25,7 +25,10 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 #Install figlet, cowsay, lolcat, fortune
 tput setaf 2; echo 'Installing figlet, cowsay, lolcat, fortune, z, trash'
+brew install cask
+brew cask install sublime-text
 brew install cowsay
+brew install terminal-notifier
 brew install lolcat
 brew install figlet
 brew install fortune
