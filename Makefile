@@ -8,3 +8,4 @@ install:
 update:
 	cp ~/.vimrc .
 	cp ~/.zshrc .
+	cp ~/.vim .
