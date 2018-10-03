@@ -1,6 +1,11 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
 export JAVA_HOME=$(/usr/libexec/java_home)
+export HADOOP_HOME=/usr/local/opt/hadoop
+export SPARK_HOME=/usr/local/opt/spark
+export SCALA_HOME=/usr/local/opt/scala
+export YARN_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export PATH=$HOME/bin:/usr/local/bin:$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$SPARK_HOME/bin:$SCALA_HOME/bin
+export SPARK_DIST_CLASSPATH=$(hadoop classpath)
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/siddhantbenadikar/.oh-my-zsh
 
