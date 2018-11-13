@@ -6,6 +6,7 @@ export SCALA_HOME=/usr/local/opt/scala
 export YARN_CONF_DIR=$HADOOP_HOME/etc/hadoop
 export PATH=$HOME/bin:/usr/local/bin:$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$SPARK_HOME/bin:$SCALA_HOME/bin
 export SPARK_DIST_CLASSPATH=$(hadoop classpath)
+export PATH=~/anaconda3/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/siddhantbenadikar/.oh-my-zsh
 
