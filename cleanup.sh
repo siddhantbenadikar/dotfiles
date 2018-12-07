@@ -6,3 +6,4 @@ brew cleanup -s
 #now diagnotic
 brew doctor
 brew missing
+conda clean -a -y
