@@ -4,9 +4,9 @@ export HADOOP_HOME=/usr/local/opt/hadoop
 export SPARK_HOME=/usr/local/opt/spark
 export SCALA_HOME=/usr/local/opt/scala
 export YARN_CONF_DIR=$HADOOP_HOME/etc/hadoop
-export PATH=$HOME/bin:/usr/local/bin:$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$SPARK_HOME/bin:$SCALA_HOME/bin
+export PATH=$HOME/bin:$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$SPARK_HOME/bin:$SCALA_HOME/bin
 export SPARK_DIST_CLASSPATH=$(hadoop classpath)
-export PATH=~/anaconda3/bin:$PATH
+export PATH=~/anaconda/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/siddhantbenadikar/.oh-my-zsh
 
@@ -98,6 +98,7 @@ alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh" 
 alias vimconfig="vim ~/.vimrc"
 alias gp=lazygit
+alias v=vim
 # Added z to zshrc
 . `brew --prefix`/etc/profile.d/z.sh
 
