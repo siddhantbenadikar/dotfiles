@@ -1,19 +1,25 @@
-# If you come from bash you might have to change your $PATH.
+# iF YOU COME FROM BASH YOU MIGHT HAVE TO CHANGE YOUR $path.
+# Fastlane
+export PATH="$HOME/.fastlane/bin:$PATH"
+# Java
 export JAVA_HOME=$(/usr/libexec/java_home)
-export HADOOP_HOME=/usr/local/opt/hadoop
-export SPARK_HOME=/usr/local/opt/spark
-export SCALA_HOME=/usr/local/opt/scala
-export YARN_CONF_DIR=$HADOOP_HOME/etc/hadoop
-export PATH=$HOME/bin:$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$SPARK_HOME/bin:$SCALA_HOME/bin
-export SPARK_DIST_CLASSPATH=$(hadoop classpath)
-export PATH=~/anaconda/bin:$PATH
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/siddhantbenadikar/.oh-my-zsh
-
+export ZSH=/Users/sbenadikar/.oh-my-zsh
+# Android Env Var
+export ANDROID_HOME=/Users/sbenadikar/Library/Android/sdk
+export PATH=${PATH}:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+export ANDROID_AVD_HOME=/Users/sbenadikar/.android/avd
+# Vagrant env setup
+export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
+export VAGRANT_CLOUD_TOKEN=CtYwEF3DHYkWRQ.atlasv1.6gv6ffJfYiRMPnzvnMhhslq3eGxZrAgHeEJyMlzyhz6HUihoN62LsJ4QBfCIhDlmMHY
+#NVM env setup
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="cobalt2"
+ZSH_THEME="dracula"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -42,7 +48,7 @@ ZSH_THEME="cobalt2"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+#ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -99,6 +105,8 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias vimconfig="vim ~/.vimrc"
 alias gp=lazygit
 alias v=vim
+alias deldroid=delete_android_bullshit
+alias xcode-del-cache="rm -rf ~/Library/Developer/Xcode/DerivedData"
 # Added z to zshrc
 . `brew --prefix`/etc/profile.d/z.sh
 
@@ -115,3 +123,12 @@ function lazygit() {
     git commit -a -m "$1" &&
     git push
 }
+
+function delete_android_bullshit() {
+    rm -rf ~/workspace/QBMobile/android/.project ~/workspace/QBMobile/android/app/.project ~/workspace/QBMobile/android/app/bin/
+}
+
+function delete_all_branches() {
+    git branch -D `git branch | grep -v \* | xargs`
+}
+
