@@ -5,7 +5,7 @@ set -e
 tput setaf 2; echo 'Installing brew...'
 which -s brew
 if [[ $? != 0 ]] ; then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
     brew update
 fi
@@ -26,14 +26,15 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 #Install figlet, cowsay, lolcat, fortune
 tput setaf 2; echo 'Installing figlet, cowsay, lolcat, fortune, z, trash'
 brew install cask
-brew cask install sublime-text
+brew cask install visual-studio-code
+brew cask install whatsapp
+brew cask install spotify
 brew install cowsay
 brew install terminal-notifier
 brew install lolcat
 brew install figlet
 brew install fortune
 brew install z
-brew install trash
 
 #Setting up .vimrc and .zshrc
 tput setaf 2; echo 'Setting up .vimrc and .zshrc...'
@@ -50,4 +51,3 @@ source ~/.zshrc
 
 tput setaf 2; echo 'DONE!!!'
 tput setaf 1; echo 'You need to download and setup cobalt-2 manually to complete the setup process.'
-
