@@ -33,7 +33,21 @@
             "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
             "hidden": false,
             "name": "Ubuntu",
-            "source": "Windows.Terminal.Wsl"
+            "source": "Windows.Terminal.Wsl",
+            "acrylicOpacity" : 0.75,
+            "closeOnExit" : true,
+            "colorScheme" : "Campbell",
+            "commandline" : "wsl.exe. -d Ubuntu",
+            "cursorColor" : "#FFFFFF",
+            "cursorShape" : "bar",
+            "fontFace" : "Consolas",
+            "fontSize" : 12,
+            "historySize" : 9001,
+            "icon" : "C:\\Users\\Siddhant\\Downloads\\ubuntu.png",
+            "padding" : "0, 0, 0, 0",
+            "snapOnInput" : true,
+            "startingDirectory" : "%USERPROFILE%",
+            "useAcrylic" : true
         }
     ],
 
