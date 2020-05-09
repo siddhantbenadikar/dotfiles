@@ -4,8 +4,8 @@ export ZSH="$HOME/.oh-my-zsh"
 export ZSH_DISABLE_COMPFIX=true
 #NVM env setup
 export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -109,10 +109,9 @@ alias d="cd /mnt/d"
 # figlet banner
 figlet Hi, Siddhant | lolcat
 
-# fortune | cowsay
-if [ -x /usr/local/bin/cowsay -a -x /usr/local/bin/fortune -a -x /usr/local/bin/lolcat ]; then
-    fortune | cowsay | lolcat
-fi
+# fortune | cowsay | lolcat
+fortune | cowsay | lolcat
+
 # Custom functions
 function lazygit() {
     git add . &&
@@ -122,4 +121,9 @@ function lazygit() {
 
 function delete_all_branches() {
     git branch -D `git branch | grep -v \* | xargs`
+}
+
+function ssa() {
+    eval $(ssh-agent -s)
+    ssh-add ~/.ssh/github
 }
